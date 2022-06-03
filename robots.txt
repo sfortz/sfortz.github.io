@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://sfortz.github.io/sitemap.xml
