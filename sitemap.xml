@@ -64,18 +64,6 @@
   <url>
     <loc></loc><lastmod>2021-08-23T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://sfortz.github.io/categories/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://sfortz.github.io/category/demo/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://sfortz.github.io/post/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://sfortz.github.io/post/getting-started/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc></loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://sfortz.github.io/category/%E6%95%99%E7%A8%8B/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
     <loc>https://sfortz.github.io/publication/2020-concolic/</loc><lastmod>2020-09-02T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://sfortz.github.io/tag/concolic-testing/</loc><lastmod>2020-09-02T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
@@ -90,8 +78,12 @@
   <url>
     <loc></loc><lastmod>2020-09-02T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://sfortz.github.io/slides/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://sfortz.github.io/guides/</loc><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://sfortz.github.io/slides/example/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://sfortz.github.io/painting/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://sfortz.github.io/reading/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://sfortz.github.io/categories/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://sfortz.github.io/tag/sat/smt-solving/</loc><changefreq>weekly</changefreq></url></urlset>
