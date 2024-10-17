@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper-Conference | Sophie Fortz, Ph.D.</title>
+    <link>https://sfortz.github.io/publication-type/paper-conference/</link>
+      <atom:link href="https://sfortz.github.io/publication-type/paper-conference/index.xml" rel="self" type="application/rss+xml" />
+    <description>Paper-Conference</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sfortz.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Paper-Conference</title>
+      <link>https://sfortz.github.io/publication-type/paper-conference/</link>
+    </image>
+    
+    <item>
+      <title>Exploring LLM-Driven Explanations for Quantum Algorithms</title>
+      <link>https://sfortz.github.io/publication/2024-esem/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2024-esem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards Feature-based ML-enabled Behaviour Location</title>
+      <link>https://sfortz.github.io/publication/2024-vamos/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2024-vamos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Doctoral Symposium: Variability-Aware Behavioural Learning</title>
+      <link>https://sfortz.github.io/publication/2023-lifts-ds/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2023-lifts-ds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Behavioral Maps: Identifying Architectural Smells in Self-adaptive Systems at Runtime</title>
+      <link>https://sfortz.github.io/publication/2022-bm-ecsa/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2022-bm-ecsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identifying Architectural Smells in Self-Adaptive Systems at Runtime</title>
+      <link>https://sfortz.github.io/publication/2022-bm-cal/</link>
+      <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2022-bm-cal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Vision to identify Architectural Smells in Self-Adaptive Systems using Behavioral Maps</title>
+      <link>https://sfortz.github.io/publication/2021-bm-casa/</link>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2021-bm-casa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Doctoral Symposium: LIFTS: learning featured transition systems</title>
+      <link>https://sfortz.github.io/publication/2021-lifts-ds/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2021-lifts-ds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VaryMinions: leveraging RNNs to identify variants in event logs</title>
+      <link>https://sfortz.github.io/publication/2021-varyminions/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2021-varyminions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An SMT-based concolic testing tool for logic programs</title>
+      <link>https://sfortz.github.io/publication/2020-concolic/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2020-concolic/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

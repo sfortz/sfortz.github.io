@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Variability-Intensive Systems | Sophie Fortz, Ph.D.</title>
+    <link>https://sfortz.github.io/tag/variability-intensive-systems/</link>
+      <atom:link href="https://sfortz.github.io/tag/variability-intensive-systems/index.xml" rel="self" type="application/rss+xml" />
+    <description>Variability-Intensive Systems</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sfortz.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Variability-Intensive Systems</title>
+      <link>https://sfortz.github.io/tag/variability-intensive-systems/</link>
+    </image>
+    
+    <item>
+      <title>VaryMinions: Leveraging RNNs to Identify Variants in Variability-intensive Systems’ Logs</title>
+      <link>https://sfortz.github.io/publication/2024-emse/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2024-emse/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

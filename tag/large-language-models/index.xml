@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Large Language Models | Sophie Fortz, Ph.D.</title>
+    <link>https://sfortz.github.io/tag/large-language-models/</link>
+      <atom:link href="https://sfortz.github.io/tag/large-language-models/index.xml" rel="self" type="application/rss+xml" />
+    <description>Large Language Models</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sfortz.github.io/media/icon_hu7729264130191091259.png</url>
+      <title>Large Language Models</title>
+      <link>https://sfortz.github.io/tag/large-language-models/</link>
+    </image>
+    
+    <item>
+      <title>Exploring LLM-Driven Explanations for Quantum Algorithms</title>
+      <link>https://sfortz.github.io/publication/2024-esem/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2024-esem/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,12 +5,20 @@
     <link>https://sfortz.github.io/tag/variability-mining/</link>
       <atom:link href="https://sfortz.github.io/tag/variability-mining/index.xml" rel="self" type="application/rss+xml" />
     <description>Variability Mining</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://sfortz.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://sfortz.github.io/media/icon_hu7729264130191091259.png</url>
       <title>Variability Mining</title>
       <link>https://sfortz.github.io/tag/variability-mining/</link>
     </image>
+    
+    <item>
+      <title>VaryMinions: Leveraging RNNs to Identify Variants in Variability-intensive Systems’ Logs</title>
+      <link>https://sfortz.github.io/publication/2024-emse/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2024-emse/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Doctoral Symposium: Variability-Aware Behavioural Learning</title>
