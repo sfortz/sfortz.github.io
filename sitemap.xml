@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sfortz.github.io/publication/2025-accelerq/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/tag/genetic-algorithms/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/tag/machine-learning/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/tag/optimisation/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/publication-type/paper-conference/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/publication_types/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/publication/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/tag/quantum-computing/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/tag/quantum-program-analysis/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/tag/search-based-software-engineering/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://sfortz.github.io/tags/</loc>
+    <lastmod>2025-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://sfortz.github.io/tag/code-explainability/</loc>
     <lastmod>2024-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -11,26 +55,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://sfortz.github.io/tag/large-language-models/</loc>
-    <lastmod>2024-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://sfortz.github.io/publication-type/paper-conference/</loc>
-    <lastmod>2024-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://sfortz.github.io/publication_types/</loc>
-    <lastmod>2024-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://sfortz.github.io/publication/</loc>
-    <lastmod>2024-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://sfortz.github.io/tag/quantum-computing/</loc>
-    <lastmod>2024-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://sfortz.github.io/tags/</loc>
     <lastmod>2024-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -63,10 +87,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://sfortz.github.io/tag/feature/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://sfortz.github.io/tag/machine-learning/</loc>
     <lastmod>2024-02-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>

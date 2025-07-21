@@ -7,7 +7,7 @@
     <description>Activities</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://sfortz.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://sfortz.github.io/media/icon_hu_645fa481986063ef.png</url>
       <title>Activities</title>
       <link>https://sfortz.github.io/activities/</link>
     </image>
@@ -17,8 +17,7 @@
       <link>https://sfortz.github.io/activities/guides/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://sfortz.github.io/activities/guides/</guid>
-      <description>&lt;p&gt;When I was five years old, my parents send me to a group of 
- , close to our home. I spent all my Sunday mornings in a group of girls about the same age as I. In July, it was the great adventure: the annual camp. One or two weeks lost in the Belgium countryside. I learned to be more open-minded, sociable and autonomous. At 17, it was time for me to give back what I was given. I decided to join a group staff. During six years, I supervised children and youths from different groups:&lt;/p&gt;
+      <description>&lt;p&gt;When I was five years old, my parents send me to a group of &lt;a href=&#34;https://www.guides.be/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Girl Guides&lt;/a&gt; , close to our home. I spent all my Sunday mornings in a group of girls about the same age as I. In July, it was the great adventure: the annual camp. One or two weeks lost in the Belgium countryside. I learned to be more open-minded, sociable and autonomous. At 17, it was time for me to give back what I was given. I decided to join a group staff. During six years, I supervised children and youths from different groups:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Leader of the 8-12 year olds 2013-2015&lt;/li&gt;
 &lt;li&gt;Leader of the 12-16 year olds 2015-2016&lt;/li&gt;
@@ -190,8 +189,7 @@
       <link>https://sfortz.github.io/activities/cslabs/</link>
       <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
       <guid>https://sfortz.github.io/activities/cslabs/</guid>
-      <description>&lt;p&gt;
- is a non-profit organisation founded by students from Unamur’s Faculty of Computer Science,  with the primary mission of promoting computer science between and beyond the university walls. CSLabs offers training sessions encompassing both technical (&lt;em&gt;e.g.&lt;/em&gt;, Git, CSS) and non-technical domains (&lt;em&gt;e.g.&lt;/em&gt;, effective email communication). These training sessions are conducted by fellow students, creating a peer-driven learning environment.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.cslabs.be/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSLabs&lt;/a&gt; is a non-profit organisation founded by students from Unamur’s Faculty of Computer Science,  with the primary mission of promoting computer science between and beyond the university walls. CSLabs offers training sessions encompassing both technical (&lt;em&gt;e.g.&lt;/em&gt;, Git, CSS) and non-technical domains (&lt;em&gt;e.g.&lt;/em&gt;, effective email communication). These training sessions are conducted by fellow students, creating a peer-driven learning environment.&lt;/p&gt;
 &lt;p&gt;CSLabs provides students with valuable support in finding student jobs in computer science-related fields. They assist in various aspects, including the job search process, forming teams for substantial projects, and drafting contracts to ensure that students&amp;rsquo; rights are protected and they receive fair compensation.&lt;/p&gt;
 &lt;p&gt;Additionally, CSLabs annually organizes a Hackathon, a thrilling programming contest open to students from all over Belgium. This Hackathon centers around a specific theme, challenging participants to showcase their innovative prowess and problem-solving skills.&lt;/p&gt;
 &lt;p&gt;I had the privilege of joining CSLabs shortly after its inception, and my involvement deepened as I assumed the role of secretary on the board after a few months. I was in charge of tasks such as:&lt;/p&gt;
@@ -271,8 +269,7 @@
       <link>https://sfortz.github.io/activities/valencia/</link>
       <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
       <guid>https://sfortz.github.io/activities/valencia/</guid>
-      <description>&lt;p&gt;During my master thesis, I had the chance to go in Valencia (Spain) for a three months research internship. From February to April 2019, I worked on an SMT-based concolic testing tool for logic programs, under the supervision of Pr. German Vidal. My thesis was nominated for the 
-. This best master thesis award promotes scientific excellence and a spirit of innovation, entrepreneurship, investing in new fields and new avenues. In 2020, this work was published as a short paper in the 15th International Symposium on Functional and Logic Programming (FLOPS 2020, Akita, Japan). Due to Covid-19, the conference was held online.&lt;/p&gt;
+      <description>&lt;p&gt;During my master thesis, I had the chance to go in Valencia (Spain) for a three months research internship. From February to April 2019, I worked on an SMT-based concolic testing tool for logic programs, under the supervision of Pr. German Vidal. My thesis was nominated for the &lt;a href=&#34;https://nouvelles.unamur.be/upnews.2019-12-02.9958261385/view&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jean Fichefet award&lt;/a&gt;. This best master thesis award promotes scientific excellence and a spirit of innovation, entrepreneurship, investing in new fields and new avenues. In 2020, this work was published as a short paper in the 15th International Symposium on Functional and Logic Programming (FLOPS 2020, Akita, Japan). Due to Covid-19, the conference was held online.&lt;/p&gt;
 
 
 
@@ -311,12 +308,6 @@
     
       &lt;div class=&#34;gallery-item&#34;&gt;
         &lt;img src=&#34;https://sfortz.github.io/media/albums/valencia/6.jpg&#34; alt=&#34;6.jpg&#34;&gt;
-      &lt;/div&gt;
-    
-  
-    
-      &lt;div class=&#34;gallery-item&#34;&gt;
-        &lt;img src=&#34;https://sfortz.github.io/media/albums/valencia/7.jpg&#34; alt=&#34;7.jpg&#34;&gt;
       &lt;/div&gt;
     
   

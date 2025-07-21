@@ -5,12 +5,20 @@
     <link>https://sfortz.github.io/tag/machine-learning/</link>
       <atom:link href="https://sfortz.github.io/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Machine Learning</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://sfortz.github.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://sfortz.github.io/media/icon_hu_645fa481986063ef.png</url>
       <title>Machine Learning</title>
       <link>https://sfortz.github.io/tag/machine-learning/</link>
     </image>
+    
+    <item>
+      <title>AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators</title>
+      <link>https://sfortz.github.io/publication/2025-accelerq/</link>
+      <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2025-accelerq/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Towards Feature-based ML-enabled Behaviour Location</title>

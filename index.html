@@ -1,13 +1,13 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: October 17, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: July 21, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.2" />
 
   
   
@@ -57,7 +57,7 @@
   
   
     
-    <link href="/dist/wc.min.css" rel="stylesheet" />
+    <link href="/dist/wc.min.05570f1deda629d4e2d77f73534a63aa04471f012db6735c59424372f467db85.css" rel="stylesheet" />
   
 
   
@@ -160,8 +160,8 @@
   
 
   
-  <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu_5cac115d14ed3d49.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_e7f327b39c12e7ca.png" />
 
   <link rel="canonical" href="https://sfortz.github.io/" />
 
@@ -191,8 +191,8 @@
   <meta property="og:site_name" content="Sophie Fortz, Ph.D." />
   <meta property="og:url" content="https://sfortz.github.io/" />
   <meta property="og:title" content="Sophie Fortz, Ph.D." />
-  <meta property="og:description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." /><meta property="og:image" content="https://sfortz.github.io/media/icon_hu7729264130191091259.png" />
-    <meta property="twitter:image" content="https://sfortz.github.io/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." /><meta property="og:image" content="https://sfortz.github.io/media/icon_hu_645fa481986063ef.png" />
+    <meta property="twitter:image" content="https://sfortz.github.io/media/icon_hu_645fa481986063ef.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta property="og:updated_time" content="2022-10-24T00:00:00&#43;00:00" />
@@ -239,6 +239,14 @@
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -492,40 +500,67 @@
     --pagefind-ui-border: #152028;
     --pagefind-ui-tag: #152028;
   }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
 </style>
 
 <script>
+  
+  let searchWrapper = null;
+
   window.addEventListener('DOMContentLoaded', (event) => {
+    
     new PagefindUI({
       element: "#search",
       showSubResults: true,
       baseUrl: window.hbb.pagefind.baseUrl,
       bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
     });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
   });
-  document.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById('search');
-    let trigger = document.getElementById('search_toggle');
 
-    if (trigger) {
-      trigger.addEventListener('click', () => {
-        element.classList.toggle('hidden');
-        element.querySelector("input").value = ""
-        element.querySelector("input").focus()
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
 
-        if (!element.classList.contains('hidden')) {
-          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
 
-          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
-            clear_trigger.setAttribute('listenerOnClick', 'true');
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
 
-            clear_trigger.addEventListener('click', () => {
-              element.classList.toggle('hidden');
-            });
-          }
-        }
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
 
-      });
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
     }
   });
 </script>
@@ -553,8 +588,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.e5fa931947cac2d947732ea37a770aae2b5bd4a50b6048060cd129b46159a06d.js"
-    integrity="sha256-5fqTGUfKwtlHcy6jencKritb1KULYEgGDNEptGFZoG0="
+    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
+    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
   ></script>
 
   
@@ -702,6 +737,20 @@
         <a
           class="nav-link "
           
+          href="/#activities"
+        >Personal interests</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
           href="/activities/poster/"
         >PhD project</a
         >
@@ -731,9 +780,9 @@
       
       
       <button
-        aria-label="search"
+        aria-label="toggle search"
         class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
-        id="search_toggle">
+        data-search-toggle>
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       
@@ -774,8 +823,26 @@
   </nav>
 </header>
 
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
 
-<div id="search" class="hidden p-3"></div>
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
 
 
         
@@ -888,7 +955,7 @@
 
 
 <section id="section-resume-biography-3" class="relative hbb-section blox-resume-biography-3  " style="padding: 6rem 0 6rem 0;" >
- <div class="home-section-bg  bg-image parallax" style="background-color: black;background-image: url(&#39;https://sfortz.github.io/media/banner_hu13324143041976517200.webp&#39;);background-size: cover;filter: brightness(0.5);">
+ <div class="home-section-bg  bg-image parallax" style="background-color: black;background-image: url(&#39;https://sfortz.github.io/media/banner_hu_5601f79e178d1c77.webp&#39;);background-size: cover;filter: brightness(0.5);">
    
  </div>
   
@@ -924,7 +991,7 @@
 
     <div class="avatar-wrapper mt-10">
       
-      <img class="avatar rounded-full bg-white dark:bg-gray-800 p-1" src="/author/sophie-fortz/avatar_hu7177284078850229189.jpg" alt="Sophie Fortz"
+      <img class="avatar rounded-full bg-white dark:bg-gray-800 p-1" src="/author/sophie-fortz/avatar_hu_9bf36b40a59447cb.jpg" alt="Sophie Fortz"
            width="150" height="150">
       
     </div>
@@ -1079,7 +1146,7 @@
     
     <div class="pt-2 justify-content-center prose prose-slate dark:prose-invert">
       <div class="bio-text" >
-        <h2 id="about-me">About Me</h2>
+        <h2 id="welcome">Welcome!</h2>
 <p>My name is Sophie Fortz and I am a postdoctoral researcher with expertise in software engineering. Currently, I&rsquo;m deeply involved in quantum programming as part of the VSL-Q project at King&rsquo;s College London. In this exciting project, we are dedicated to providing verified simulation of large-scale quantum systems. Our focus extends beyond the theoretical to the practical, addressing platform specificities, noise and scalability issues. This endeavour represents a collaborative synergy, bringing together experts from diverse fields such as physics, programming languages, and software engineering. Working alongside Prof. Mohammad Reza Mousavi, I’ll be channeling my previous expertise towards pioneering testing techniques specifically tailored for quantum programs.</p>
 <p>Before embarking on this quantum journey, I did a Ph.D. at the University of Namur. Under the guidance of Dr. Gilles Perrouin and Prof. Patrick Heymans, I delved into the intricacies of software engineering. After being funded by the FNRS EoS (Excellence of Science) VeriLearn project for a year, I secured a competitive <a href="https://www.frs-fnrs.be/en/financements-resp/chercheur-doctorant" target="_blank" rel="noopener">FRIA (FNRS) Grant</a>. In September 2023, I successfully defended my thesis, entitled <a href="activities/poster"><em>&ldquo;LIFTS: Learning Featured Transition Systems&rdquo;</em></a>.</p>
 <p>On my spare hours, I like to read, <a href="activities/painting">draw and paint</a>. I was also an active member of <a href="activities/guides">the Belgian Guide Federation</a> for years, where I have been successively girl guide, group leader and trainer.</p>
@@ -1106,11 +1173,11 @@
       <ul class="list-disc list-inside space-y-1 pl-5">
         
         <li>
-          Quantum programming
+          Quantum software engineering
         </li>
         
         <li>
-          Software product lines
+          Software variability
         </li>
         
         <li>
@@ -1301,21 +1368,29 @@
   <ol class="relative border-s border-gray-200 dark:border-gray-700">
     
     <li class="mb-10 ms-6">
+        
         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
         </span>
-      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Postdoctoral Researcher
-        
-      </h3>
-      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">King&#39;s College London</span>
-      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
-        
-          November 2023 –
-        
-        
-          Present
-        
-      </time>
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Postdoctoral Researcher</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">King&#39;s College London</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                November 2023 –
+              
+              
+                Present
+              
+            </time>
+          </div>
+          
+          <img src="/media/companies/kcl.svg" alt="Company logo" class="w-16 h-16 object-contain" />
+        </div>
+      
       <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">Working on the VSL-Q project.</div>
 
       
@@ -1323,21 +1398,29 @@
     </li>
     
     <li class="mb-10 ms-6">
+        
         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
         </span>
-      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Postdoctoral Researcher
-        
-      </h3>
-      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
-      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
-        
-          September 2023 –
-        
-        
-          November 2023
-        
-      </time>
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Postdoctoral Researcher</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                September 2023 –
+              
+              
+                November 2023
+              
+            </time>
+          </div>
+          
+          <img src="/media/companies/unamur.svg" alt="Company logo" class="w-16 h-16 object-contain" />
+        </div>
+      
       <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">Working on the EoS VeriLearn project.</div>
 
       
@@ -1345,44 +1428,59 @@
     </li>
     
     <li class="mb-10 ms-6">
+        
         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
         </span>
-      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">PhD Student
-        
-      </h3>
-      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
-      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
-        
-          September 2019 –
-        
-        
-          September 2023
-        
-      </time>
-      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">My thesis is entitled 
-. I studied how to model the behaviour of Software Product Lines and how to automatically generate those kind of models.</div>
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">PhD Student</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                September 2019 –
+              
+              
+                September 2023
+              
+            </time>
+          </div>
+          
+          <img src="/media/companies/unamur.svg" alt="Company logo" class="w-16 h-16 object-contain" />
+        </div>
+      
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">My thesis is entitled <a href="/activities/poster/"><em>Learning Featured Transition Systems</em></a>. I studied how to model the behaviour of Software Product Lines and how to automatically generate those kind of models.</div>
 
       
 
     </li>
     
     <li class="mb-10 ms-6">
+        
         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
         </span>
-      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">ALMIN president
-        
-      </h3>
-      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
-      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
-        
-          September 2021 –
-        
-        
-          September 2023
-        
-      </time>
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">ALMIN president</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                September 2021 –
+              
+              
+                September 2023
+              
+            </time>
+          </div>
+          
+          <img src="/media/companies/almin.svg" alt="Company logo" class="w-16 h-16 object-contain" />
+        </div>
+      
       <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">The ALMIN is the alumni association of the computer science faculty in the university of Namur. This group organise activities for all the master and bachelor students who got their degree in the faculty. I am a board member of the association since 2019 and in 2021, I took the presidence.</div>
 
       
@@ -1390,45 +1488,60 @@
     </li>
     
     <li class="mb-10 ms-6">
+        
         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
         </span>
-      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Research internship
-        
-      </h3>
-      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Polytechnic University of Valencia</span>
-      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
-        
-          February 2019 –
-        
-        
-          April 2019
-        
-      </time>
-      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">During my 
-, I’ve done three months of research at the polytechnic university of Valencia (Spain), under the supervision of Pr. German Vidal. My work was nominated for the Jean Fichefet award (best master thesis award).</div>
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Research internship</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Polytechnic University of Valencia</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                February 2019 –
+              
+              
+                April 2019
+              
+            </time>
+          </div>
+          
+          <img src="/media/companies/upv.svg" alt="Company logo" class="w-16 h-16 object-contain" />
+        </div>
+      
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">During my <a href="/activities/valencia/">master thesis</a>, I’ve done three months of research at the polytechnic university of Valencia (Spain), under the supervision of Pr. German Vidal. My work was nominated for the Jean Fichefet award (best master thesis award).</div>
 
       
 
     </li>
     
     <li class="mb-10 ms-6">
+        
         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
         </span>
-      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Secretary and board member
-        
-      </h3>
-      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Computer Science Labs (CSLabs)</span>
-      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
-        
-          September 2017 –
-        
-        
-          December 2019
-        
-      </time>
-      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert">is a non-profit organisation founded by students from Unamur’s Faculty of Computer Science, in order to promote computer science externally and provide trainings in different fields by and for students.</div>
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Secretary and board member</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Computer Science Labs (CSLabs)</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                September 2017 –
+              
+              
+                December 2019
+              
+            </time>
+          </div>
+          
+          <img src="/media/companies/cslabs.svg" alt="Company logo" class="w-16 h-16 object-contain" />
+        </div>
+      
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><a href="/activities/cslabs/">CSLabs</a> is a non-profit organisation founded by students from Unamur’s Faculty of Computer Science, in order to promote computer science externally and provide trainings in different fields by and for students.</div>
 
       
 
@@ -1448,18 +1561,25 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
             </svg>
         </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">PhD in Software Engineering
 
-        </h3>
-        <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
-        <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">PhD in Software Engineering</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                September 2019 –
+              
+              
+                September 2023
+              
+            </time>
+          </div>
           
-            September 2019 –
           
-          
-            September 2023
-          
-        </time>
+        </div>
         <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 prose prose-slate dark:prose-invert"></div>
 
         
@@ -1471,18 +1591,25 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
             </svg>
         </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">MSc in Computer Science, specialised in Software Engineering
 
-        </h3>
-        <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
-        <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">MSc in Computer Science, specialised in Software Engineering</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                September 2017 –
+              
+              
+                June 2019
+              
+            </time>
+          </div>
           
-            September 2017 –
           
-          
-            June 2019
-          
-        </time>
+        </div>
         <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 prose prose-slate dark:prose-invert"></div>
 
         
@@ -1494,18 +1621,25 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
             </svg>
         </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">BSc in Computer Science
 
-        </h3>
-        <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
-        <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+
+         
+        <div class="flex justify-between items-start gap-1">
+          <div>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">BSc in Computer Science</h3>
+            <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Namur</span>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+              
+                September 2014 –
+              
+              
+                September 2017
+              
+            </time>
+          </div>
           
-            September 2014 –
           
-          
-            September 2017
-          
-        </time>
+        </div>
         <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 prose prose-slate dark:prose-invert"></div>
 
         
@@ -1692,6 +1826,74 @@
 <div class="mt-16 sm:mt-20 container max-w-3xl w-full">
   <div class="flex flex-col space-y-3">
 
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      Avner Bensoussan</span>, <span >
+      Elena Chachkarova</span>, <span >
+      Karine Even-Mendoza</span>, <span class="font-bold">
+      Sophie Fortz</span>, <span >
+      Connor Lenihan</span>
+  </span>
+  (2025).
+  <a href="/publication/2025-accelerq/" class="underline">AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators</a>.
+  In <em>OOPSLA 2025</em>.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/2025-accelerq/cite.bib" target="_blank" data-filename="/publication/2025-accelerq/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
 
   
     
@@ -1995,76 +2197,6 @@
 </div>
 
   
-    
-
-
-<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="article-metadata li-cite-author">
-    
-
-  <span >
-      Edilton Lima Dos Santos</span>, <span class="font-bold">
-      Sophie Fortz</span>, <span >
-      Pierre-Yves Schobbens</span>, <span >
-      Gilles Perrouin</span>
-  </span>
-  (2022).
-  <a href="/publication/2022-bm-ecsa/" class="underline">Behavioral Maps: Identifying Architectural Smells in Self-adaptive Systems at Runtime</a>.
-  
-
-  
-  <div class="flex flex-wrap space-x-3">
-    
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-<a class="hb-attachment-link hb-attachment-small" href="/publication/2022-bm-ecsa/cite.bib" target="_blank" data-filename="/publication/2022-bm-ecsa/cite.bib">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
-  Cite
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a class="hb-attachment-link hb-attachment-small" href="https://doi.org/10.1007/978-3-031-15116-3_8" target="_blank" rel="noopener">
-  DOI
-</a>
-
-
-
-  </div>
-  
-
-  
-  
-</div>
-
-  
 
   </div>
 </div>
@@ -2101,133 +2233,6 @@
   </div>
 
 
-
-
-  
-
-  
-</section>
-
-  
-
-  
-  
-    
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-    
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="section-resume-awards" class="relative hbb-section blox-resume-awards  " style="padding: 6rem 0 6rem 0;" >
- <div class="home-section-bg " >
-   
- </div>
-  
-
-  
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
-
-  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-    Awards
-  </div>
-
-  
-
-<div class="w-full flex flex-col gap-6">
-
-</div>
-</div>
 
 
   
@@ -2464,6 +2469,153 @@
 
 
 
+<section id="section-resume-awards" class="relative hbb-section blox-resume-awards  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Awards
+  </div>
+
+  
+
+<div class="w-full flex flex-col gap-6">
+
+
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Distinguished Reviewer Award</h5>
+  
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    28th International Systems and Software Product Line Conferencea &#8729;
+    
+      September 2024
+    
+  </div>
+
+  
+
+  
+</div>
+  
+  
+</div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="services" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
  <div class="home-section-bg " >
    
@@ -2494,35 +2646,38 @@
 <li>
 <p><em><strong>Organising workshops and conferences</strong></em> :<br/></p>
 <ul>
-<li>Q-SE 2025 (Web &amp; Publicity chair), 2025 ;<br/></li>
-<li>QSANER (co-Chair), 2025 ;<br/></li>
-<li>ICTSS (Challenge Track co-Chair), 2024 ;<br/></li>
-<li>SPLC (Publicity chair), 2024 ;<br/></li>
-<li>LearnAut(Co-chair), 2024 ;<br/></li>
+<li>Q-SE 2025 and 2026 (web &amp; publicity chair) ;<br/></li>
+<li>SPLC 2024 (publicity co-chair) and 2025 (doctoral symposium co-chair) ;<br/></li>
+<li>QSANER 2025 (co-chair) ;<br/></li>
+<li>ICTSS 2024 (challenge track co-chair) ;<br/></li>
+<li>LearnAut 2024 (co-chair) ;<br/></li>
 </ul>
 </li>
 <li>
 <p><em><strong>Reviewing</strong></em> :<br/></p>
 <ul>
 <li>
-<p>for specialised conferences: ICSR (research track, as a subreviewer), SPLC (research track, demo &amp; tools), ESEC-FSE (artefacts), ECOOP (artefacts, extended review committee), SSBSE (challenge track), ICTAC (Research track), BENEVOL, VaMoS, ICST (Poster track), GI ICSE ;<br/></p>
+<p>for specialised conferences: ICSR (research track, as a subreviewer), SPLC (research track, demo &amp; tools), ESEC-FSE (artefacts), ECOOP (artefacts, extended review committee), SSBSE (challenge track), ICTAC (research track), BENEVOL, VaMoS, ICST (poster track), GI @ ICSE, ISSTA (artefacts), Re:Volution, ASE (student research competition)  ;<br/></p>
 </li>
 <li>
-<p>for journals: EMSE (as a subreviewer), Software Quality Journal, SoSyM, JSS, TSE ;<br/><br/></p>
+<p>for journals: EMSE (as a subreviewer), Software Quality Journal, SoSyM, JSS, TSE, SCICO ;<br/><br/></p>
 </li>
 </ul>
+</li>
+<li>
+<p>Contributing to the <em><strong>Strategic Reflection Group on Software Variability Conferences</strong></em>, uniting SPLC, ICSR, and VaMoS to shape the future of the field and foster synergies ;<br/><br/></p>
 </li>
 <li>
 <p>Acting as a <em><strong>Student Volunteer</strong></em> for OR 2018 and SPLC 2023 ;<br/><br/></p>
 </li>
 <li>
-<p>Representing scientifics at the Computer Science <em><strong>Faculty Council</strong></em> ;<br/><br/></p>
+<p>Representing scientifics at the UNamur Computer Science <em><strong>Faculty Council</strong></em> ;<br/><br/></p>
 </li>
 <li>
-<p>Representing and promoting the Computer Science Faculty at several <em><strong>Students Fairs</strong></em> ;<br/><br/></p>
+<p>Representing and promoting the UNamur Computer Science Faculty at several <em><strong>Students Fairs</strong></em> ;<br/><br/></p>
 </li>
 <li>
-<p>Representing scientifics at the <em><strong>Section Groups</strong></em>, the place where students can express themselves to improve the faculty.</p>
+<p>Representing scientifics at the <em><strong>Section Groups</strong></em>, the place where students can express themselves to improve the UNamur Computer Science faculty.</p>
 </li>
 </ul>
 </div>
@@ -2732,7 +2887,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/activities/guides/featured_hu14502833308799373334.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/activities/guides/featured_hu_a6c2017234c01bcd.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -2756,6 +2911,29 @@
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/sophie-fortz/avatar_hu_f2e074a783d53521.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Sophie Fortz</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2024-01-31">Jan 31, 2024</time>
         </div>
@@ -2794,7 +2972,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/activities/painting/featured_hu11787668957318986209.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/activities/painting/featured_hu_aeb9fb2f998a6add.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -2818,6 +2996,29 @@
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/sophie-fortz/avatar_hu_f2e074a783d53521.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Sophie Fortz</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2024-01-31">Jan 31, 2024</time>
         </div>
@@ -2856,7 +3057,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/activities/cslabs/featured_hu2272539032418668210.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/activities/cslabs/featured_hu_2274484542769982.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -2880,6 +3081,29 @@
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/sophie-fortz/avatar_hu_f2e074a783d53521.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Sophie Fortz</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2022-06-03">Jun 3, 2022</time>
         </div>
@@ -2918,7 +3142,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/activities/poster/featured_hu2149157721693040009.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/activities/poster/featured_hu_1e318262619308e9.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -2980,7 +3204,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/activities/valencia/featured_hu14622321931302098081.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/activities/valencia/featured_hu_d5f7f71ccb03163a.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -3004,6 +3228,29 @@
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/sophie-fortz/avatar_hu_f2e074a783d53521.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Sophie Fortz</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2022-06-03">Jun 3, 2022</time>
         </div>
@@ -3194,6 +3441,12 @@
         </a>
     
          
+        <a href="https://sfortz.github.io/tag/genetic-algorithms/" 
+            style="font-size: 13px;">
+            genetic algorithms
+        </a>
+    
+         
         <a href="https://sfortz.github.io/tag/large-language-models/" 
             style="font-size: 13px;">
             large language models
@@ -3207,7 +3460,7 @@
     
          
         <a href="https://sfortz.github.io/tag/machine-learning/" 
-            style="font-size: 13px;">
+            style="font-size: 21px;">
             machine learning
         </a>
     
@@ -3218,9 +3471,21 @@
         </a>
     
          
-        <a href="https://sfortz.github.io/tag/quantum-computing/" 
+        <a href="https://sfortz.github.io/tag/optimisation/" 
             style="font-size: 13px;">
+            optimisation
+        </a>
+    
+         
+        <a href="https://sfortz.github.io/tag/quantum-computing/" 
+            style="font-size: 21px;">
             quantum computing
+        </a>
+    
+         
+        <a href="https://sfortz.github.io/tag/quantum-program-analysis/" 
+            style="font-size: 13px;">
+            quantum program analysis
         </a>
     
          
@@ -3245,6 +3510,12 @@
         <a href="https://sfortz.github.io/tag/sat/smt-solving/" 
             style="font-size: 13px;">
             sat/smt solving
+        </a>
+    
+         
+        <a href="https://sfortz.github.io/tag/search-based-software-engineering/" 
+            style="font-size: 13px;">
+            search-based software engineering
         </a>
     
          
@@ -3357,7 +3628,7 @@
 
   
   <p class="powered-by text-center">
-    © 2024 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 

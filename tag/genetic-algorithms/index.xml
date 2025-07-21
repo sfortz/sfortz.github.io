@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genetic Algorithms | Sophie Fortz, Ph.D.</title>
+    <link>https://sfortz.github.io/tag/genetic-algorithms/</link>
+      <atom:link href="https://sfortz.github.io/tag/genetic-algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <description>Genetic Algorithms</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sfortz.github.io/media/icon_hu_645fa481986063ef.png</url>
+      <title>Genetic Algorithms</title>
+      <link>https://sfortz.github.io/tag/genetic-algorithms/</link>
+    </image>
+    
+    <item>
+      <title>AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators</title>
+      <link>https://sfortz.github.io/publication/2025-accelerq/</link>
+      <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://sfortz.github.io/publication/2025-accelerq/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
